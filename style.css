@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-dark: #1a472a;
+    --primary-medium: #2d5a3f;
+    --primary-light: #3d6a4e;
+    --accent-green: #4a7859;
+    --text-dark: #1a1a1a;
+    --text-light: #f5f5f5;
+    --background-light: #f8f9fa;
+    --neutral-light: #e9ecef;
+    --neutral-medium: #dee2e6;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-light);
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+header {
+    background-color: var(--primary-dark);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-item-left {
+    margin-right: auto;
+}
+
+.nav-item-right {
+    margin-left: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--neutral-light);
+    background-color: var(--primary-medium);
+    border-radius: 4px;
+}
+
+/* Dropdown menu for essays */
+.essays-dropdown {
+    position: relative;
+}
+
+.essays-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary-dark);
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 0.5rem 0;
+}
+
+.essays-dropdown:hover .essays-dropdown-content {
+    display: block;
+}
+
+.essays-dropdown-content a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.essays-dropdown-content a:hover {
+    background-color: var(--primary-medium);
+}
+
+/* Main content area */
+main {
+    margin-top: 80px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Profile section */
+.profile-section {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--neutral-medium);
+}
+
+.profile-image {
+    flex: 0 0 300px;
+}
+
+.profile-picture {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--primary-light);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: var(--neutral-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+    border: 2px dashed var(--primary-light);
+}
+
+.profile-content {
+    flex: 1;
+}
+
+.profile-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-dark);
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.site-description {
+    font-size: 1rem;
+    color: var(--primary-medium);
+    line-height: 1.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        flex: 0 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .profile-content h1 {
+        font-size: 2rem;
+    }
+}
+
